@@ -1,7 +1,16 @@
+Ideia Principal:
 - Adicione um frontend (por exemplo, com Flask ou FastAPI) para interagir pelo navegador.
 - Inclua paginadores na busca (caso existam muitos itens).
 - Use índices no MongoDB para otimizar buscas (e.g., db.itens.createIndex({ tags: 1 })).
 
-Avançado:
+_____________________________________________________________________________________________________________
+
+Extra:
 - Use um sistema de pontuação para ordenar recomendações (e.g., baseadas em tags mais frequentes)
 
+_____________________________________________________________________________________________________________
+
+Frontend:
+
+- O que fazer com textos 
+- Rolagem infinita (home)

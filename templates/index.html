@@ -1,6 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="banner-container">
+    <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner1.jpg') }}');"></div>
+    <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner2.jpg') }}');"></div>
+    <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner3.jpg') }}');"></div>
+    <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner4.jpg') }}');"></div>
+</div>
+{% endblock %}
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolagem Infinita</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="banner-container">
+        <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner1.jpg') }}');"></div>
+        <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner2.jpg') }}');"></div>
+        <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner3.jpg') }}');"></div>
+        <div class="banner" style="background-image: url('{{ url_for('static', filename='iamges/banner4.jpg') }}');"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
+-->
+
+
+
+<!-- {% extends "base.html" %}
+
+{% block content %}
 <div class="container">
     <div class="movie-banner">
         <img src="{{ url_for('static', filename='placeholder.png') }}" alt="Banner do Filme">
@@ -11,4 +46,4 @@
         <p>⭐ {{ filme.get('estrelas', 'Sem avaliação') }} estrelas</p>
     </div>
 </div>
-{% endblock %}
+{% endblock %} -->

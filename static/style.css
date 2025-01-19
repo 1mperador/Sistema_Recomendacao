@@ -14,6 +14,12 @@
     margin-right: 1rem;
 }
 
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
 .movie-banner img {
     max-width: 100%;
     height: auto;
@@ -46,3 +52,132 @@ header nav a {
     text-decoration: none;
     color: #007bff;
 }
+
+/* Aplica um fundo escuro ao corpo e ajusta a fonte para contraste */
+body {
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fundo principal escuro */
+    color: #e0e0e0; /* Texto em cinza claro para contraste */
+    overflow: hidden; /* Oculta a barra de rolagem */
+
+}
+
+/* Estiliza o cabeçalho */
+header {
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+    background-color: #1f1f1f; /* Fundo mais escuro para o cabeçalho */
+    padding: 20px 0; /* Espaçamento interno para legibilidade */
+    border-bottom: 2px solid #333333; /* Linha de separação mais discreta */
+
+}
+
+/* Links de navegação no cabeçalho */
+header nav a {
+    margin: 0 15px; /* Espaçamento horizontal entre os links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #b4b4b4; /* Cor roxa suave para os links */
+    font-weight: bold; /* Negrito para destaque */
+}
+
+header nav a:hover {
+    color: #03dac6; /* Cor verde clara ao passar o mouse */
+}
+
+/* Estiliza o contêiner principal */
+main {
+    padding: 20px;
+    background-color: #1e1e1e; /* Fundo escuro para o conteúdo principal */
+    border-radius: 8px; /* Bordas arredondadas para suavizar o design */
+    max-width: 800px; /* Define uma largura máxima */
+    margin: 20px auto; /* Centraliza o conteúdo horizontalmente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Adiciona uma leve sombra */
+}
+
+/* Imagens dentro do site */
+img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem o contêiner */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilo dos botões (se houver) */
+button {
+    background-color: #03dac6; /* Fundo verde claro */
+    color: #121212; /* Texto escuro para contraste */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #018786; /* Cor mais escura no hover */
+}
+
+/* Estiliza os campos de formulário */
+input, textarea {
+    background-color: #2b2b2b; /* Fundo escuro para campos */
+    color: #e0e0e0; /* Texto claro */
+    border: 1px solid #444; /* Borda discreta */
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #777; /* Cor do texto de placeholder */
+}
+
+/* Rodapé (opcional) */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1f1f1f;
+    color: #bbb;
+    font-size: 0.9rem;
+    border-top: 2px solid #333;
+}
+
+
+
+/* Cada banner individual */
+.banner {
+    scroll-snap-align: center; /* Centraliza o item no viewport */
+    flex: 0 0 80%; /* Cada banner ocupa 80% da largura do container */
+    max-height: 60vh; /* Limita a altura máxima do banner (60% da tela) */
+    background-size: cover; /* Expande a imagem para cobrir o banner */
+    background-position: center;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    transition: transform 0.3s ease; /* Suaviza a expansão */
+    cursor: pointer;
+
+    width: 300px;
+    height: 200px;
+}
+/* Container dos banners */
+.banner-container {
+    display: flex;
+    /* overflow-x: auto; Permite rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Adiciona "snap" ao scroll */
+    height: 70vh; /* Ajusta a altura total do container (70% da tela) */
+    align-items: center; /* Centraliza verticalmente os banners menores */
+
+    overflow-x: scroll;
+    padding: 20px;
+    gap: 20px;
+}
+/* Expande ao passar o mouse */
+.banner:hover {
+    transform: scale(1.05); /* Aumenta o banner em 5% */
+    z-index: 10; /* Eleva o banner acima dos outros */
+}
+
+/* Adiciona espaçamento entre os banners */
+.banner-container .banner:not(:last-child) {
+    margin-right: 20px; /* Espaço entre os banners */
+}
+
