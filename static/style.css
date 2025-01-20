@@ -144,36 +144,30 @@ footer {
 
 
 /* Cada banner individual */
-.banner {
-    scroll-snap-align: center; /* Centraliza o item no viewport */
-    flex: 0 0 80%; /* Cada banner ocupa 80% da largura do container */
-    max-height: 60vh; /* Limita a altura máxima do banner (60% da tela) */
-    background-size: cover; /* Expande a imagem para cobrir o banner */
-    background-position: center;
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    transition: transform 0.3s ease; /* Suaviza a expansão */
-    cursor: pointer;
 
-    width: 300px;
-    height: 200px;
+.banner {
+    min-width: 300px; /* Largura mínima */
+    height: 100%; /* Ajusta a altura ao container */
+    background-size: cover; /* Ajuste proporcional sem deformar */
+    background-position: center; /* Centraliza a imagem */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
+
 /* Container dos banners */
 .banner-container {
     display: flex;
-    /* overflow-x: auto; Permite rolagem horizontal */
-    scroll-snap-type: x mandatory; /* Adiciona "snap" ao scroll */
-    height: 70vh; /* Ajusta a altura total do container (70% da tela) */
-    align-items: center; /* Centraliza verticalmente os banners menores */
-
     overflow-x: scroll;
-    padding: 20px;
-    gap: 20px;
+    scroll-behavior: smooth;
+    padding: 10px;
+    gap: 10px;
+    height: 300px; /* Altura máxima para os banners */
 }
+
 /* Expande ao passar o mouse */
 .banner:hover {
-    transform: scale(1.05); /* Aumenta o banner em 5% */
-    z-index: 10; /* Eleva o banner acima dos outros */
+    transform: scale(1.1); /* Expande suavemente */
+    cursor: pointer;
 }
 
 /* Adiciona espaçamento entre os banners */
