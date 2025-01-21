@@ -1,12 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="banner-container" id="bannerContainer">
+<!-- <div class="banner-container" id="bannerContainer">
     <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner1.jpg') }}');"></div>
     <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner2.jpg') }}');"></div>
     <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner3.jpg') }}');"></div>
     <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner4.jpg') }}');"></div>
+</div> -->
+<div id="bannerContainer">
+    <div class="banner">
+        <img src="static/images/banner1.jpg" alt="Banner 1">
+        <div class="info">
+            <h3>Título do Filme 1</h3>
+            <p>Descrição breve do filme 1.</p>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="static/images/banner2.jpg" alt="Banner 2">
+        <div class="info">
+            <h3>Título do Filme 2</h3>
+            <p>Descrição breve do filme 2.</p>
+        </div>
+    </div>
+    <!-- Adicione mais banners conforme necessário -->
 </div>
+
 <script>
     const bannerContainer = document.getElementById('bannerContainer');
 
