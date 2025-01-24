@@ -1,20 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Buscar Itens por Tag</h2>
-<form method="POST">
-    <label for="tag">Tag:</label>
-    <input type="text" name="tag" id="tag" required>
-    <button type="submit">Buscar</button>
-</form>
+<div class="form-container">
+    <h2>Buscar Itens</h2>
+    <form method="POST" action="/buscar">
+        <label for="tag">Tag:</label>
+        <input type="text" id="tag" name="tag" placeholder="Digite uma tag para buscar" required>
 
-<h3>Resultados:</h3>
-<ul>
-    {% for item in resultados %}
-    <li>
-        <strong>{{ item['titulo'] }}</strong> - {{ item['descricao'] }}<br>
-        <small>Tags: {{ ", ".join(item['tags']) }}</small>
-    </li>
-    {% endfor %}
-</ul>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if resultados %}
+    <div class="resultados">
+        <h3>Resultados:</h3>
+        <ul>
+            {% for item in resultados %}
+            <li>
+                <strong>{{ item['titulo'] }}</strong> - {{ item['descricao'] }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
 {% endblock %}

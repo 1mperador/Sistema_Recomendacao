@@ -1,59 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- <div class="banner-container" id="bannerContainer">
-    <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner1.jpg') }}');"></div>
-    <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner2.jpg') }}');"></div>
-    <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner3.jpg') }}');"></div>
-    <div class="banner" style="background-image: url('{{ url_for('static', filename='images/banner4.jpg') }}');"></div>
-</div> -->
-<div id="bannerContainer">
-    <div class="banner">
-        <img src="static/images/banner1.jpg" alt="Banner 1">
-        <div class="info">
-            <h3>Título do Filme 1</h3>
-            <p>Descrição breve do filme 1.</p>
-        </div>
+<div class="container">
+    <div class="movie-banner">
+        <img src="{{ url_for('static', filename='/images/banner1.jpg') }}" alt="Banner do Filme">
     </div>
-    <div class="banner">
-        <img src="static/images/banner2.jpg" alt="Banner 2">
-        <div class="info">
-            <h3>Título do Filme 2</h3>
-            <p>Descrição breve do filme 2.</p>
-        </div>
+    <div class="movie-info">
+        <h2>{{ filme['titulo'] }}</h2>
+        <p>{{ filme['descricao'] }}</p>
+        <p>⭐ {{ filme.get('estrelas', 'Sem avaliação') }} estrelas</p>
     </div>
-    <!-- Adicione mais banners conforme necessário -->
 </div>
-
-<script>
-    const bannerContainer = document.getElementById('bannerContainer');
-
-    let isDragging = false; // Indica se o mouse está pressionado
-    let startX; // Posição inicial do mouse no eixo X
-    let scrollLeft; // Posição inicial do scroll do container
-
-    bannerContainer.addEventListener('mousedown', (e) => {
-        isDragging = true; // Marca como arrastando
-        bannerContainer.classList.add('active'); // Opcional: Adiciona uma classe
-        startX = e.pageX - bannerContainer.offsetLeft; // Captura a posição inicial do mouse
-        scrollLeft = bannerContainer.scrollLeft; // Captura a posição inicial do scroll
-    });
-
-    bannerContainer.addEventListener('mouseleave', () => {
-        isDragging = false; // Para arrastar quando o mouse sair do container
-    });
-
-    bannerContainer.addEventListener('mouseup', () => {
-        isDragging = false; // Para arrastar quando o botão do mouse for solto
-    });
-
-    bannerContainer.addEventListener('mousemove', (e) => {
-        if (!isDragging) return; // Só executa se estiver arrastando
-        e.preventDefault(); // Previne o comportamento padrão
-        const x = e.pageX - bannerContainer.offsetLeft; // Calcula a nova posição do mouse
-        const walk = (x - startX) * 1.5; // Distância movida (multiplicador ajusta a sensibilidade)
-        bannerContainer.scrollLeft = scrollLeft - walk; // Move o scroll do container
-    });
-</script>
 
 {% endblock %}

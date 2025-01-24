@@ -18,8 +18,8 @@ Este é um sistema simples de recomendações de itens (como filmes) criado util
 
 ### Requisitos
 
-1. Python 3.12 ou superior
-2. MongoDB instalado e em execução
+1. `Python 3.12` ou superior
+2. `MongoDB` instalado e em execução
 3. Gerenciador de pacotes `pip`
 
 ### Passos
