@@ -1,12 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f9f9f9;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #f9f9f9;
+    font-size: 2rem;
+}
+
+header nav {
+    margin-top: 0.5rem;
+}
+
+header nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #1e90ff;
+    font-size: 1.1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin: 2rem auto;
     max-width: 900px;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     padding: 1rem;
-    background-color: #f9f9f9;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .movie-banner {
@@ -14,201 +51,40 @@
     margin-right: 1rem;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
 .movie-banner img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     border-radius: 5px;
 }
 
 .movie-info {
     flex: 2;
     padding: 1rem;
-    background: #fff;
+    background: #1e1e1e;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
 }
 
 .movie-info h2 {
     margin-top: 0;
     font-size: 1.5rem;
-    color: #333;
+    color: #f9f9f9;
 }
 
 .movie-info p {
     font-size: 1rem;
-    color: #555;
+    color: #ccc;
     margin: 0.5rem 0;
 }
 
-header nav a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: #007bff;
-}
-
-/* Aplica um fundo escuro ao corpo e ajusta a fonte para contraste */
-body {
-    font-family: Arial, sans-serif; /* Define uma fonte padrão */
-    margin: 0;
-    padding: 0;
-    background-color: #121212; /* Fundo principal escuro */
-    color: #e0e0e0; /* Texto em cinza claro para contraste */
-    overflow: hidden; /* Oculta a barra de rolagem */
-
-}
-
-/* Estiliza o cabeçalho */
-header {
-    text-align: center; /* Centraliza o conteúdo do cabeçalho */
-    background-color: #1f1f1f; /* Fundo mais escuro para o cabeçalho */
-    padding: 20px 0; /* Espaçamento interno para legibilidade */
-    border-bottom: 2px solid #333333; /* Linha de separação mais discreta */
-
-}
-
-/* Links de navegação no cabeçalho */
-header nav a {
-    margin: 0 15px; /* Espaçamento horizontal entre os links */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #b4b4b4; /* Cor roxa suave para os links */
-    font-weight: bold; /* Negrito para destaque */
-}
-
-header nav a:hover {
-    color: #03dac6; /* Cor verde clara ao passar o mouse */
-}
-
-/* Estiliza o contêiner principal */
-main {
-    padding: 20px;
-    background-color: #1e1e1e; /* Fundo escuro para o conteúdo principal */
-    border-radius: 8px; /* Bordas arredondadas para suavizar o design */
-    max-width: 800px; /* Define uma largura máxima */
-    margin: 20px auto; /* Centraliza o conteúdo horizontalmente */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Adiciona uma leve sombra */
-}
-
-/* Imagens dentro do site */
-img {
-    max-width: 100%; /* Garante que as imagens não ultrapassem o contêiner */
-    border-radius: 8px; /* Bordas arredondadas */
-}
-
-/* Estilo dos botões (se houver) */
-button {
-    background-color: #03dac6; /* Fundo verde claro */
-    color: #121212; /* Texto escuro para contraste */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-button:hover {
-    background-color: #018786; /* Cor mais escura no hover */
-}
-
-/* Estiliza os campos de formulário */
-input, textarea {
-    background-color: #2b2b2b; /* Fundo escuro para campos */
-    color: #e0e0e0; /* Texto claro */
-    border: 1px solid #444; /* Borda discreta */
-    padding: 10px;
-    border-radius: 4px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-input::placeholder, textarea::placeholder {
-    color: #777; /* Cor do texto de placeholder */
-}
-
-/* Rodapé (opcional) */
 footer {
+    background-color: #1e1e1e;
+    padding: 1rem;
     text-align: center;
-    padding: 10px 0;
-    background-color: #1f1f1f;
-    color: #bbb;
-    font-size: 0.9rem;
-    border-top: 2px solid #333;
-}
-
-
-
-/* Cada banner individual */
-
-.banner {
-    position: relative;
-    flex: 0 0 300px; /* Tamanho fixo para cada banner */
-    height: 200px;
-    transition: transform 0.3s ease, z-index 0.3s ease;
-    cursor: pointer;
-}
-
-/* Container dos banners */
-.banner-container {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-    width: 100%;
-    height: 300px; /* Altura ajustável */
-}
-
-/* Expande ao passar o mouse */
-.banner:hover {
-    transform: scale(1.5); /* Aumenta o banner ao passar o mouse */
-    z-index: 10; /* Garante que o banner fique acima dos outros */
-}
-.banner-container::-webkit-scrollbar {
-    display: none;
-}
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px; /* Deixa as bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
-}
-
-.info {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
-    color: white;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 0 0 8px 8px; /* Alinha com o banner */
-}
-.banner:hover .info {
-    opacity: 1; /* Exibe as informações ao passar o mouse */
-}
-
-/* Adiciona espaçamento entre os banners */
-.banner-container .banner:not(:last-child) {
-    margin-right: 20px; /* Espaço entre os banners */
-}
- 
-#bannerContainer {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 20px;
-    scroll-behavior: smooth;
-}
-
-#bannerContainer:active {
-    cursor: grabbing; /* Altera o cursor ao arrastar */
+    width: 100%;
+    color: #f9f9f9;
 }
