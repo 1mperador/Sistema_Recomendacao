@@ -7,7 +7,7 @@
       }
     ],
     "env": {
-      "MONGODB_URI": "MONGO_URI=mongodb+srv://DbLinux:db3M0n@recomendacoes.68snr.mongodb.net/?retryWrites=true&w=majority&appName=recomendacoes"
+      "MONGO_URI": "mongodb+srv://DbLinux:db3M0n@recomendacoes.68snr.mongodb.net/?retryWrites=true&w=majority&appName=recomendacoes"
     }
   }
   
