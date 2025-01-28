@@ -22,8 +22,13 @@ app = Flask(__name__)
 
 # Rota inicial
 @app.route("/")
-def home():
-    return jsonify({"message": "Bem-vindo ao sistema de recomendações de filmes!"})
+def hello():
+    return 'message": "Bem-vindo ao sistema de recomendações de filmes!'
+
+@app.route('/data')
+def get_data():
+    data = list(collection.find())
+    return jsonify(data)
 
 # Rota para buscar todos os filmes
 @app.route("/filmes", methods=["GET"])
