@@ -30,14 +30,14 @@ app = Flask(__name__)
 def hello():
     return jsonify({"message": "Bem-vindo ao sistema de recomendações de filmes!"})
 
-# Rota para buscar todos os filmes
+print("MongoDB URI:", MONGO_URI)
+
+
 @app.route("/filmes", methods=["GET"])
 def listar_filmes():
-    try:
-        filmes = list(collection.find({}, {"_id": 0}))  # Não incluir o _id na resposta
-        return jsonify(filmes), 200
-    except Exception as e:
-        return jsonify({"error": f"Erro ao listar filmes: {e}"}), 500
+    filmes = list(collection.find({}, {"_id": 0}))  # Não incluir o _id na resposta
+    return jsonify(filmes)
+
 
 # Rota para adicionar um novo filme
 @app.route("/filmes", methods=["POST"])
