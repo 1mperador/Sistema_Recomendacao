@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/app.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "env": {
+      "MONGODB_URI": "MONGO_URI=mongodb+srv://DbLinux:db3M0n@recomendacoes.68snr.mongodb.net/?retryWrites=true&w=majority&appName=recomendacoes"
+    }
+  }
+  
