@@ -1,8 +1,10 @@
-from flask import Flask, jsonify, request
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from dotenv import load_dotenv
 import os
+
+from flask import Flask, jsonify, request
+
 
 # Carregar as variáveis de ambiente do arquivo .env
 load_dotenv()
