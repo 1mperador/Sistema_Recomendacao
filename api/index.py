@@ -10,6 +10,8 @@ load_dotenv()
 # Configuração do MongoDB
 MONGO_URI = os.getenv("MONGO_URI")  # Certifique-se de que esta variável está no .env
 
+client = MongoClient(MONGO_URI, server_api=ServerApi('1'), maxPoolSize=10)
+
 # Verificar se a URI do MongoDB foi carregada corretamente
 if not MONGO_URI:
     raise ValueError("Erro: A variável de ambiente MONGO_URI não foi encontrada. Verifique seu arquivo .env.")
@@ -32,10 +34,12 @@ def hello():
 
 print("MongoDB URI:", MONGO_URI)
 
-
+# reduzao de dados para teste
 @app.route("/filmes", methods=["GET"])
 def listar_filmes():
-    filmes = list(collection.find({}, {"_id": 0}))  # Não incluir o _id na resposta
+    page = int(request.args.get("page", 1))
+    limit = int(request.args.get("limit", 10))
+    filmes = list(collection.find({}, {"_id": 0}).skip((page - 1) * limit).limit(limit))
     return jsonify(filmes)
 
 
