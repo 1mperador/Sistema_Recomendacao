@@ -13,6 +13,7 @@ Este é um sistema simples de recomendações de itens (como filmes) criado util
 - **Backend**: Flask (Python)
 - **Banco de Dados**: MongoDB
 - **Frontend**: HTML com templates Jinja2
+- **Railway**: Hospedar o Banco de Dados
 
 ## Como Executar o Projeto
 
