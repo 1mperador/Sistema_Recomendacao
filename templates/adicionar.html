@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Adicionar Item</h2>
+    <form method="POST" action="/adicionar">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Digite o título do item" required>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva o item" required></textarea>
+
+        <label for="tags">Tags (separadas por vírgula):</label>
+        <input type="text" id="tags" name="tags" placeholder="Exemplo: ação, comédia" required>
+
+        <button type="submit">Adicionar</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f9f9f9;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #f9f9f9;
+    font-size: 2rem;
+}
+
+header nav {
+    margin-top: 0.5rem;
+}
+
+header nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #1e90ff;
+    font-size: 1.1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2rem auto;
+    max-width: 900px;
+    border: 1px solid #333;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-banner {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.movie-banner img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.movie-info {
+    flex: 2;
+    padding: 1rem;
+    background: #1e1e1e;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+}
+
+.movie-info h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #f9f9f9;
+}
+
+.movie-info p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #f9f9f9;
+}
+
+/* Estilo para o formulário de adicionar e buscar */
+.form-container {
+    background-color: #222;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    text-align: center;
+    color: #fff;
+}
+
+.form-container h2 {
+    font-size: 1.8rem;
+    color: #f9f9f9;
+    margin-bottom: 1.5rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-container label {
+    font-size: 1rem;
+    color: #ccc;
+    text-align: left;
+}
+
+.form-container input, .form-container textarea, .form-container button {
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-container input, .form-container textarea {
+    background-color: #333;
+    color: #fff;
+}
+
+.form-container input:focus, .form-container textarea:focus {
+    border: 2px solid #007bff;
+}
+
+.form-container button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes para mensagens de erro ou sucesso */
+.message {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.message.success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.message.error {
+    background-color: #dc3545;
+    color: #fff;
+}
