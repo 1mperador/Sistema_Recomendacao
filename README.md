@@ -1,4 +1,4 @@
-# Sistema de Recomendacoes Simples
+# Sistema de Recomendacoes 
 
 Este é um sistema simples de recomendações de itens (como filmes) criado utilizando Python, Flask e MongoDB. O sistema permite adicionar itens com título, descrição e tags, exibir informações de um item na página inicial, e buscar itens com base em tags.
 
